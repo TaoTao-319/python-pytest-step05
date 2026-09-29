@@ -1,0 +1,72 @@
+Python 测试练习项目说明
+
+一、项目定位
+
+这是第 2 个月第 1 周的 Python 基础练习项目。项目通过几个小型业务函数，把 Python 基础语法转换为可以运行和检查的代码。
+
+二、源文件说明
+
+1. basic_syntax.py
+
+练习变量、字符串、数字、布尔值、列表、字典、if 条件判断、for 循环和函数。
+程序会打印姓名、年龄、学习状态、技能列表、学生信息、成年判断、总分和平均分。
+
+2. phone_validator.py
+
+包含 is_valid_phone(phone) 函数和 explain_phone_result(phone) 函数。
+手机号必须是 11 位数字字符串，以 1 开头，第二位必须属于 3—9。
+示例覆盖有效手机号、长度错误、非数字、空值和数字类型输入。
+
+3. password_validator.py
+
+包含 validate_password(password) 函数和 print_password_result(password) 函数。
+密码需要满足长度、大小写字母、数字、特殊字符和空格规则。
+如果输入不是字符串，函数会立即返回类型错误；如果是字符串，函数会继续检查并累积多个错误。
+
+4. shopping_cart.py
+
+包含 validate_cart_item(item)、calculate_total(cart) 和 try_calculate(cart) 函数。
+程序会先检查购物车和商品数据，再计算商品价格乘以数量的总和。
+如果商品数据有问题，会抛出 ValueError，并说明第几个商品出现问题。
+examples 包含多个商品的正常情况，以及第 2 个商品、第 3 个商品出错的情况。
+
+5. demo.py
+
+统一调用手机号校验、密码校验和购物车总价计算三个业务函数。
+运行 demo.py 可以快速查看三个主要练习场景。
+
+三、运行命令
+
+在本目录终端运行：
+
+python basic_syntax.py
+python phone_validator.py
+python password_validator.py
+python shopping_cart.py
+python demo.py
+
+四、已覆盖的输入情况
+
+- 正常字符串和非字符串
+- 空字符串和 None
+- 手机号长度不足或过长
+- 手机号包含非数字字符
+- 密码缺少大小写字母、数字或特殊字符
+- 密码包含空格
+- 空购物车
+- 多商品购物车
+- 第 2 个商品或第 3 个商品数据错误
+- 缺少商品名称、价格或数量
+- 价格或数量为错误类型
+- 价格或数量为负数
+- 商品名称为空或只有空格
+- 商品不是字典
+- 购物车不是列表
+
+五、当前限制
+
+本项目目前使用各文件中的示例数据进行演示，还没有使用 pytest 编写自动化测试，也没有连接数据库、接口或 Web 页面。
+
+六、下一步计划
+
+下一周可以使用 pytest 为现有函数编写测试用例，学习 assert、fixture、参数化和测试目录结构。
